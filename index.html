@@ -1,0 +1,62 @@
+<html>
+
+<head> 
+    <script>
+
+        function calculateAge() {
+            var now = new Date(); 
+            console.log(now);                           //getting current date
+            var currentYear = now.getFullYear();                //extracting year from the date
+            var currentM = now.getMonth();                   //extracting month from the date
+
+            var dobget = document.getElementById("DOB").value; //getting user input
+            console.log(dobget);
+            var dob = new Date(dobget);                             //formatting input as date
+            console.log(dob);
+            var prevYear = dob.getFullYear();                          //extracting year from input date
+
+            var ageYear = currentYear - prevYear; //calculate year
+
+            document.getElementById('demo').innerHTML = ageYear + ' years ';
+        
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <label >Your Date of Birth <label>
+                <input type="date" name="DOB" id='DOB' />
+                <button style= "height: 20px; width: 120px" id="button" onclick="calculateAge()" >Find Age</button>
+
+                <p id="demo">age shows here</p>
+    </center>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
